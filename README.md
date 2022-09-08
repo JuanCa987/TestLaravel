@@ -62,3 +62,56 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+**TEST EN LARAVEL**
+
+
+**PhpUnit**
+Es la forma de comprobar el correcto funcionamiento de una unidad de código. PhpUnit es el framework para implementar la prueba unitaria en lenguajes PHP.
+•	**Unit test**: Verifica que las unidades individuales de código funcionen como se espera, se puede generar automáticamente.
+•	**Feature tests**: Probara la forma en que la unidad funcionan juntas y transmite un mensaje.
+
+**Proyecto nuevo**
+
+>*New laravel TestLaravel
+cd TestLaravel
+Composer install
+code .*
+
+**Ejecutando Pruebas**
+> *php artisan test*
+
+**Crear un archivo test**
+> *php artisan make:test UserTest*
+
+**Creado el archivo se ejecuta el comando para crear la intefaz de usuario(ui)**
+> composer require laravel/ui
+
+**Se debe crear la interfaz autentica reactiva**
+> php artisan ui react --auth
+
+**Se instala el npm**
+> npm install
+> En algunos casos la terminal integrada de visual arroja un error, por lo que puede utilizar el Cmd del sistema:
+
+**Se ejecuta lo siguiente:**
+> npm run dev
+
+**Dentro del archivo UserTest.php, se crea la siguiente funcion:**
+
+> public function test_login_form(){
+        $response = $this->get('/login');
+        $response->assertStatus(200);
+    }
+
+**Se debe poner el use en el archivo**
+
+> // use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
+
+**Se ejecuta el Test en el terminal**
+
+> php artisan test
+
+**se sube al repositorio**
+https://github.com/JuanCa987/TestLaravel.git
